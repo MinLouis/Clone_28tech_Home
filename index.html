@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Di-nhan-IT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="wrap">
+                <div class="logo">
+                    <a href="#">
+                        <img src="../28tech/image/logo-28tech.svg" alt="28Tech">
+                    </a>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <div class="menu-close"><i class="fa-solid fa-x"></i></div>
+                        <li>
+                            <a href="#" class="active">Trang chủ</a>
+                        </li>
+                        <li>
+                            <a href="#">Giới thiệu</a>
+                        </li>
+                        <li>
+                            <a href="minh.html" target="_self">Khóa học Zoom</a>
+                        </li>
+                        <li>
+                            <a href="#">Khóa học Video</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#">Feedback</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="menu-toggle">&#9776;</div>
+                <a class="button" href="#">
+                    Liên hệ
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="overlay"></div>
+    <script>
+        // Mở/đóng menu khi nhấp vào biểu tượng menu-toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function (event) {
+            event.stopPropagation(); // Ngăn việc click vào menu-toggle làm đóng menu ngay lập tức
+            const menu = document.querySelector('.menu ul');
+            const overlay = document.querySelector('.overlay');
+
+            menu.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+
+        // Đóng menu và overlay khi nhấp ra ngoài menu
+        document.addEventListener('click', function (event) {
+            const menu = document.querySelector('.menu ul');
+            const overlay = document.querySelector('.overlay');
+            if (menu.classList.contains('active') && !menu.contains(event.target)) {
+                menu.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        });
+
+        // Đóng menu và overlay khi nhấp vào dấu "X"
+        document.querySelector('.menu-close').addEventListener('click', function (event) {
+            event.stopPropagation(); // Ngăn việc click vào menu-close làm mở lại menu
+            document.querySelector('.menu ul').classList.remove('active');
+            document.querySelector('.overlay').classList.remove('active');
+        });
+    </script>
+
+
+
+    <main class="main">
+        <div class="container">
+            <div class="content">
+                <h1>Minh_Tuan - Become A Better Developer</h1>
+            </div>
+            <div class="title">
+                <p>Minh_Tuan là đơn vị cung cấp những khóa học chất lượng cao về lập trình với mục tiêu lớn nhất là giúp
+                    các bạn sinh viên IT phát triển kiến thức, sự nghiệp !</p>
+            </div>
+            <div class="menu">
+                <a href="khoa-hoc" class="menu1">Các Khóa Học</a>
+                <a target="_blank" href="https://zalo.me/0392014396" class="menu2">Zalo: 0392014396</a>
+            </div>
+        </div>
+        <div class="image">
+            <img src="../28tech/image/anh dai dien.png">
+        </div>
+    </main>
+
+
+    <div class="wrap1">
+        <div class="container">
+            <div class="content">
+                <h1>Khóa Học Tại 28Tech</h1>
+            </div>
+            <div class="list">
+                <div class="item">
+                    <a href="#" class="iner-image">
+                        <img src="../28tech/image/fullstack_thumb_500.jpg" alt="">
+                    </a>
+                    <div class="title-content">
+                        <div class="danh-gia">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(180 Đánh giá)</span>
+                        </div>
+                        <h3 class="content">
+                            <a href="#">Lập trình Fullstack</a>
+                        </h3>
+                        <div class="title">
+                            <p><i class="fa-solid fa-folder-open"></i>
+                                <b>95</b> Bài giảng
+                            </p>
+                            <p><i class="fa-solid fa-circle-user"></i>
+                                <b>32</b> Học viên
+                            </p>
+                            <p><i class="fa-solid fa-calendar"></i>
+                                Khai giảng: <b>10/09/2024</b>
+                            </p>
+                            <p><i class="fa-solid fa-calendar"></i>
+                                Lịch học: <b>Thứ 3, Thứ 5, Thứ 7</b>
+                            </p>
+                            <p><i class="fa-solid fa-clock"></i>
+                                Giờ học: <b>19h-21h</b>
+                            </p>
+                            <div class="title-img">
+                                <div class="imagee">
+                                    <img src="../28tech/image/favicon.png">
+                                </div>
+                                <p>Đội ngũ 28Tech</p>
+                            </div>
+                            <div class="minh">
+                                <h3 class="content1">12,800,000đ</h3>
+                                <p class="content2"><del>25,000,000đ</del></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="#" class="iner-image">
+                        <img src="../28tech/image/c++ co ban toi nc_thumb_500.png" alt="">
+                    </a>
+                    <div class="title-content">
+                        <div class="danh-gia">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(258 Đánh giá)</span>
+                        </div>
+                        <h4 class="content">
+                            <a href="#">Lập trình C++ Cơ bản tới Nâng cao</a>
+                        </h4>
+                        <div class="title">
+                            <p><i class="fa-solid fa-folder-open"></i>
+                                <b>40</b> Bài giảng
+                            </p>
+                            <p><i class="fa-solid fa-calendar"></i>
+                                Khai giảng: <b>18/08/2024</b>
+                            </p>
+                            <p><i class="fa-solid fa-calendar"></i>
+                                Lịch học: <b>Thứ 2, Thứ 5, Thứ 7</b>
+                            </p>
+                            <p><i class="fa-solid fa-clock"></i>
+                                Giờ học: <b>19h-21h</b>
+                            </p>
+                            <div class="title-img">
+                                <div class="imagee">
+                                    <img src="../28tech/image/favicon.png">
+                                </div>
+                                <p>Đội ngũ 28Tech</p>
+                            </div>
+                            <div class="minh">
+                                <h3 class="content1">2,600,000đ</h3>
+                                <p class="content2"><del>4,800,000đ</del></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="#" class="iner-image">
+                        <img src="../28tech/image/lập trình c++ nâng cao__thumb_500.png" alt="">
+                    </a>
+                    <div class="title-content">
+                        <div class="danh-gia">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(326 Đánh giá)</span>
+                        </div>
+                        <h3 class="content">
+                            <a href="#">Lập trình C++ Nâng cao</a>
+                        </h3>
+                        <div class="title">
+                            <p><i class="fa-solid fa-folder-open"></i>
+                                <b>42</b> Bài giảng
+                            </p>
+                            <p><i class="fa-solid fa-circle-user"></i>
+                                <b>50</b> Học viên
+                            </p>
+                            <p><i class="fa-solid fa-calendar"></i>
+                                Khai giảng: <b>21/08/2024</b>
+                            </p>
+                            <p><i class="fa-solid fa-calendar"></i>
+                                Lịch học: <b>Thứ 2, Thứ 4, Thứ 5, Thứ 7</b>
+                            </p>
+                            <p><i class="fa-solid fa-clock"></i>
+                                Giờ học: <b>19h-21h</b>
+                            </p>
+                            <div class="title-img">
+                                <div class="imagee">
+                                    <img src="../28tech/image/favicon.png">
+                                </div>
+                                <p>Đội ngũ 28Tech</p>
+                            </div>
+                            <div class="minh">
+                                <h3 class="content1">2,750,000đ</h3>
+                                <p class="content2"><del>5,000,000đ</del></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="#" class="iner-image">
+                        <img src="../28tech/image/cấu trúc dữ liệu và giải thuậtpng_thumb_500.png" alt="">
+                    </a>
+                    <div class="title-content">
+                        <div class="danh-gia">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(290 Đánh giá)</span>
+                        </div>
+                        <h3 class="content">
+                            <a href="#">Cấu trúc dữ liệu và Giải thuật</a>
+                        </h3>
+                        <div class="title">
+                            <p><i class="fa-solid fa-folder-open"></i>
+                                <b>52</b> Bài giảng
+                            </p>
+                            <p><i class="fa-solid fa-calendar"></i>
+                                Khai giảng: <b>21/08/2024</b>
+                            </p>
+                            <p><i class="fa-solid fa-calendar"></i>
+                                Lịch học: <b>Thứ 2, Thứ 4, Thứ 5</b>
+                            </p>
+                            <p><i class="fa-solid fa-clock"></i>
+                                Giờ học: <b>21h-23h</b>
+                            </p>
+                            <div class="title-img">
+                                <div class="imagee">
+                                    <img src="../28tech/image/favicon.png">
+                                </div>
+                                <p>Đội ngũ 28Tech</p>
+                            </div>
+                            <div class="minh">
+                                <h3 class="content1">2,950,000đ</h3>
+                                <p class="content2"><del>6,000,000đ</del></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="#" class="iner-image">
+                        <img src="../28tech/image/competitive programming_thumb_500.png" alt="">
+                    </a>
+                    <div class="title-content">
+                        <div class="danh-gia">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(268 Đánh giá)</span>
+                        </div>
+                        <h3 class="content">
+                            <a href="#">Lập Trình Thi Đấu</a>
+                        </h3>
+                        <div class="title">
+                            <p><i class="fa-solid fa-folder-open"></i>
+                                <b>65</b> Bài giảng
+                            </p>
+                            <p><i class="fa-solid fa-circle-user"></i>
+                                <b>30</b> Học viên
+                            </p>
+                            <p><i class="fa-solid fa-calendar"></i>
+                                Khai giảng: <b> 24/06/2024</b>
+                            </p>
+                            <p><i class="fa-solid fa-calendar"></i>
+                                Lịch học: <b>Thứ 3, Thứ 5, Thứ 7</b>
+                            </p>
+                            <p><i class="fa-solid fa-clock"></i>
+                                Giờ học: <b>19h-21h</b>
+                            </p>
+                            <div class="title-img">
+                                <div class="imagee">
+                                    <img src="../28tech/image/favicon.png">
+                                </div>
+                                <p>Đội ngũ 28Tech</p>
+                            </div>
+                            <div class="minh">
+                                <h3 class="content1">6,990,000đ</h3>
+                                <p class="content2"><del>12,000,000đ</del></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="#" class="iner-image">
+                        <img src="../28tech/image/lập trình java _ sql_thumb_500.png" alt="">
+                    </a>
+                    <div class="title-content">
+                        <div class="danh-gia">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(215 Đánh giá)</span>
+                        </div>
+                        <h3 class="content">
+                            <a href="#">Lập trình Java và SQL</a>
+                        </h3>
+                        <div class="title">
+                            <p><i class="fa-solid fa-folder-open"></i>
+                                <b>36</b> Bài giảng
+                            </p>
+                            <p><i class="fa-solid fa-circle-user"></i>
+                                <b>50</b> Học viên
+                            </p>
+                            <p><i class="fa-solid fa-calendar"></i>
+                                Khai giảng: <b>16/08/2024</b>
+                            </p>
+                            <p><i class="fa-solid fa-calendar"></i>
+                                Lịch học: <b>Thứ 3, Thứ 6, Chủ Nhật</b>
+                            </p>
+                            <p><i class="fa-solid fa-clock"></i>
+                                Giờ học: <b>19h-21h</b>
+                            </p>
+                            <div class="title-img">
+                                <div class="imagee">
+                                    <img src="../28tech/image/favicon.png">
+                                </div>
+                                <p>Đội ngũ 28Tech</p>
+                            </div>
+                            <div class="minh">
+                                <h3 class="content1">2,800,000đ</h3>
+                                <p class="content2"><del>6,000,000đ</del></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="select">
+        <div class="bg-img">
+            <img src="../28tech/image/advisor-bg.svg">
+        </div>
+        <div class="container">
+            <div class="bgg-image">
+                <div class="item-img">
+                    <img src="../28tech/image/dai_dien1.png" alt>
+                </div>
+            </div>
+            <div class="content">
+                <h2>Về 28Tech</h2>
+                <p>28Tech là một đội nhóm gồm các Lập trình viên hiện đang làm việc ở nhiều lĩnh vực khác nhau nhưng
+                    có
+                    chung niềm đam mê với giảng dạy và chia sẻ kiến thức.</p>
+                <p>28Tech luôn cố gắng đổi mới, trau dồi kỹ năng, đón nhận đóng góp, khắc phúc những điểm chưa tốt
+                    để
+                    mang đến cho các bạn học viên những khóa học lập trình với chất lượng cao nhất</p>
+
+                <ul>
+                    <li>
+                        <div class="border">
+                            <img nh-lazy="image" src="https://cdn-main.28tech.com.vn/media/core/icons/tick.svg" style>
+                        </div>
+                        <span>Giảng viên giàu kinh nghiệm</span>
+                    </li>
+                    <li>
+                        <div class="border">
+                            <img nh-lazy="image" src="https://cdn-main.28tech.com.vn/media/core/icons/tick.svg" style>
+                        </div>
+                        <span>Bài giảng và bài tập chất lượng</span>
+                    </li>
+                </ul>
+
+                <div class="title">
+                    <a href="#">Danh sách khoá học <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="danh-muc">
+        <div class="container">
+            <div class="title-content">
+                <h2>Danh Mục Nổi Bật</h2>
+            </div>
+            <div class="menu">
+                <div class="item">
+                    <a href="#" target="_blank" title="Khoa Học Zoom">
+                        <div class="iner">
+                            <div class="icon">
+                                <img nh-lazy="image" class="img-fluid" alt="Khóa Học Zoom"
+                                    src="https://cdn-main.28tech.com.vn/media/core/icons/zoom.png" style>
+                            </div>
+                            <div class="content">
+                                <h5 class="title">Khoá Học Zoom</h5>
+                                <div class="tieu-de">
+                                    <span>7 khoá học <i class="fa-solid fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#" target="_blank" title="Khoa Học Video">
+                        <div class="iner">
+                            <div class="icon">
+                                <img nh-lazy="image" class="img-fluid" alt="Khóa Học Zoom"
+                                    src="https://cdn-main.28tech.com.vn/media/core/icons/onlinelearning.png" style>
+                            </div>
+                            <div class="content">
+                                <h5 class="title">Khoá Học Video</h5>
+                                <div class="tieu-de">
+                                    <span>7 khoá học <i class="fa-solid fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#" target="_blank" title="Blog Lập Trình">
+                        <div class="iner">
+                            <div class="icon">
+                                <img nh-lazy="image" class="img-fluid" alt="Khóa Học Zoom"
+                                    src="https://cdn-main.28tech.com.vn/media/core/icons/blog.png" style>
+                            </div>
+                            <div class="content">
+                                <h5 class="title">Blog Lập Trình</h5>
+                                <div class="tieu-de">
+                                    <span>1000+ Bài viết <i class="fa-solid fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="https://www.facebook.com/luutuanminh.ddos/" target="_blank" title="Fanpage Facebook">
+                        <div class="iner">
+                            <div class="icon">
+                                <img nh-lazy="image" class="img-fluid" alt="Khóa Học Zoom"
+                                    src="https://cdn-main.28tech.com.vn/media/core/icons/fb.png" style>
+                            </div>
+                            <div class="content">
+                                <h5 class="title">Fanpage Facebook</h5>
+                                <div class="tieu-de">
+                                    <span>24.500+ Theo Dõi <i class="fa-solid fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#" target="_blank" title="Kênh Youtube">
+                        <div class="iner">
+                            <div class="icon">
+                                <img nh-lazy="image" class="img-fluid" alt="Khóa Học Zoom"
+                                    src="../28tech/image/youtube.png" style>
+                            </div>
+                            <div class="content">
+                                <h5 class="title">Kênh Youtube</h5>
+                                <div class="tieu-de">
+                                    <span>66.500+ Theo Dõi <i class="fa-solid fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#" target="_blank" title="Kênh Tiktok">
+                        <div class="iner">
+                            <div class="icon">
+                                <img nh-lazy="image" class="img-fluid" alt="Khóa Học Zoom"
+                                    src="../28tech/image/tiktok.png" style>
+                            </div>
+                            <div class="content">
+                                <h5 class="title">Kênh Tiktok</h5>
+                                <div class="tieu-de">
+                                    <span>40.000+ Theo Dõi <i class="fa-solid fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="selection">
+        <div class="container">
+            <div class="img3">
+                <img src="../28tech/image/asset 1.png">
+            </div>
+            <div class="iner-image">
+                <img class="img1" src="../28tech/image/asset 3.png">
+                <img class="img2" src="../28tech/image/asset 5.png">
+            </div>
+            <div class="iner-content">
+                <div class="title">
+                    <h2>Những kỹ năng mà khóa học đem lại cho học viên</h2>
+                    <p>Với những bài giảng chất lượng và bài tập phong phú cùng hệ thống chấm bài tự động Hackerrank,
+                        28Tech
+                        sẽ đem lại cho người học nhiều kỹ năng rất giá trị.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i>Nền tảng kỹ thuật lập trình vững chắc</li>
+                        <li><i class="fa-solid fa-check"></i>Nâng cao kỹ năng giải quyết bài toán</li>
+                        <li><i class="fa-solid fa-check"></i>
+                            <span>Làm quen với các cấu trúc dữ liệu và giải thuật</span>
+                        </li>
+                        <li><i class="fa-solid fa-check"></i>Nâng cao tư duy logic trong lập trình</li>
+                    </ul>
+                </div>
+                <div class="iner-button">
+                    <a href="#">Xem Khoá Học <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="button1">
+        <div class="container">
+            <div class="content">
+                <h1>Gửi yêu cầu tư vấn
+                    miễn phí</h1>
+                <span>Vui lòng để lại số điện thoại, chúng tôi sẽ liên hệ tư vấn bạn trong thời gian sớm nhất.</span>
+            </div>
+            <div class="form">
+                <div class="but">
+                    <form action="https://www.w3schools.com/action_page.php" class="minh" method="post">
+                        <input type="text" placeholder="Số điện thoại..." name="phone">
+                        <button type="submit">Đăng Ký</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
